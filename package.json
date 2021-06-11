@@ -24,12 +24,15 @@
     "gatsby-plugin-gatsby-cloud": "^2.6.1",
     "gatsby-plugin-image": "^1.7.0",
     "gatsby-plugin-mdx": "^2.7.1",
+    "gatsby-plugin-react-helmet": "^4.7.1",
     "gatsby-plugin-sharp": "^3.7.1",
     "gatsby-plugin-theme-ui": "^0.9.1",
     "gatsby-remark-images": "^5.4.1",
     "gatsby-source-filesystem": "^3.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-seo-component": "^2.0.2",
     "theme-ui": "^0.9.1"
   }
 }

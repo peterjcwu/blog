@@ -1,34 +1,23 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import { 
-    container,
-    heading,
-    navLinks,
-    navLinkItem,
-    navLinkText,
-} from './layout.module.css'
+import React from "react";
+import { Box } from "theme-ui";
+import { useSiteMetadata } from "../hooks/use-site-metadata";
+import { Header } from "./header";
 
-const Layout = ({ pageTitle, children }) => {
+export const Layout = ({ children }) => {
+  const { title, description } = useSiteMetadata();
   return (
-    <main className={container}>
-      <title>{pageTitle}</title>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinks}>
-            <Link to="/about" className={navLinkItem}>
-              About
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <h1 className={heading}>{pageTitle}</h1>
-      {children}
-    </main>
-  )
-}
-export default Layout
+    <>
+      <Header siteTitle={title} siteDescription={description} />
+      <Box
+        as="div"
+        sx={{
+          margin: "0 auto",
+          maxWidth: "640px",
+          padding: "0 1.0875rem 1.45rem",
+        }}
+      >
+        <Box as="main">{children}</Box>
+      </Box>
+    </>
+  );
+};

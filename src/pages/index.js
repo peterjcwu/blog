@@ -1,3 +1,4 @@
+import { useSiteMetadata } from "../hooks/use-site-metadata";
 import * as React from "react"
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -129,6 +130,8 @@ const links = [
 
 // markup
 const IndexPage = () => {
+  const { title, description } = useSiteMetadata();
+
   return (
     <Layout pageTitle="Home Page">
       <p>I'm making this by following the Gatsby Tutorial.</p>
@@ -136,6 +139,8 @@ const IndexPage = () => {
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
         src="https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large"
       />
+      <h1>{title}</h1>
+      <p>{description}</p>
   </Layout>
   )
 }

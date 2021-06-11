@@ -4,6 +4,7 @@ module.exports = {
     description: "This is my coding blog."
   },
   plugins: [
+    `gatsby-plugin-theme-ui`,
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
